@@ -432,7 +432,7 @@ export const ModelParameters: FC<ModelParametersProps> = ({
                   onValueChange={(value) => {
                     setParameters({
                       ...savedParameters,
-                      [resourceParameter]: value,
+                      [resourceParameter]: value === "False" ? false : value === "True" ? true : value,
                     });
                   }}
                 >

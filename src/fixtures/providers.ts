@@ -5,6 +5,13 @@ export const OpenAIProvider = {
   darkLogo: "/openai-logo-dark.png",
 };
 
+export const OllamaProvider = {
+  id: "ec5b7577-17f4-4c62-b810-bbd997ollama",
+  name: "Ollama",
+  logo: "/ollama-logo.png",
+  darkLogo: "/ollama-logo.png",
+};
+
 export const GeminiProvider = {
   id: "b1b1b1b1-17f1-4c62-b810-bbd99733f0ff",
   name: "Gemini",
@@ -56,6 +63,7 @@ export const OpenRouterProvider = {
 
 export const Providers = [
   OpenAIProvider,
+  OllamaProvider,
   GeminiProvider,
   AnthropicProvider,
   BedrockProvider,

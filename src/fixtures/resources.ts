@@ -1,6 +1,7 @@
 import {
   AnthropicProvider,
   OpenAIProvider,
+  OllamaProvider,
   OpenRouterProvider,
   TogetherProvider,
 } from "./providers";
@@ -17,6 +18,15 @@ export const OpenAIChatCompletionResource = {
   providerId: OpenAIProvider.id,
   path: "https://api.openai.com/v1/chat/completions",
   docPath: "https://platform.openai.com/docs/api-reference/chat/create",
+};
+
+export const OllamaChatCompletionResource = {
+  id: "4e53cede-1ca8-479a-a32e-6e8eaf6ollama",
+  name: "Ollama Chat Completion API",
+  completionType: CompletionType.Chat,
+  providerId: OllamaProvider.id,
+  path: "http://localhost:11434/api/chat",
+  docPath: "https://github.com/ollama/ollama/tree/main/docs",
 };
 
 export const AnthropicChatCompletionResource = {
@@ -53,5 +63,6 @@ export const OpenRouterChatCompletionResource = {
 
 export const Resources = [
   OpenAIChatCompletionResource,
+  OllamaChatCompletionResource,
   TogetherChatCompletionResource,
 ];

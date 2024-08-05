@@ -13,7 +13,7 @@ export const SelectParameterSchema = z.object({
   choices: z.array(
     z.object({
       id: z.string(),
-      name: z.string(),
+      name: z.string().nullish(),
     })
   ),
   parse: ZodParseFunction,
